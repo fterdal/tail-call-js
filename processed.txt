@@ -1,0 +1,225 @@
+Statistical profiling result from isolate-0x102801600-v8.log, (278 ticks, 6 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     51   18.3%          /usr/lib/system/libsystem_malloc.dylib
+      8    2.9%          /usr/lib/system/libsystem_kernel.dylib
+      5    1.8%          /usr/lib/system/libsystem_c.dylib
+      3    1.1%          /usr/lib/system/libsystem_platform.dylib
+      2    0.7%          /usr/lib/libc++abi.dylib
+      1    0.4%          /usr/lib/system/libsystem_pthread.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    0.4%    0.5%  Builtin: StoreICStrict_Uninitialized
+      1    0.4%    0.5%  Builtin: StoreICStrict
+
+ [C++]:
+   ticks  total  nonlib   name
+     24    8.6%   11.5%  t node::(anonymous namespace)::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     11    4.0%    5.3%  T v8::internal::compiler::LinearScanAllocator::AllocateRegisters()
+      9    3.2%    4.3%  T v8::internal::compiler::CodeAssemblerLabel::UpdateVariablesAfterBind()
+      7    2.5%    3.4%  T v8::internal::compiler::LinearScanAllocator::FindFreeRegistersForRange(v8::internal::compiler::LiveRange*, v8::internal::Vector<v8::internal::compiler::LifetimePosition>)
+      6    2.2%    2.9%  T v8::internal::compiler::LiveRangeConnector::ResolveControlFlow(v8::internal::Zone*)
+      5    1.8%    2.4%  T v8::internal::compiler::InstructionSequence::InstructionBlocksFor(v8::internal::Zone*, v8::internal::compiler::Schedule const*)
+      4    1.4%    1.9%  t v8::internal::compiler::SpecialRPONumberer::ComputeAndInsertSpecialRPO(v8::internal::compiler::BasicBlock*, v8::internal::compiler::BasicBlock*)
+      4    1.4%    1.9%  T v8::internal::compiler::LiveRangeBuilder::ProcessInstructions(v8::internal::compiler::InstructionBlock const*, v8::internal::BitVector*)
+      4    1.4%    1.9%  T v8::internal::compiler::InstructionSelector::SelectInstructions()
+      4    1.4%    1.9%  T v8::internal::Zone::New(unsigned long)
+      3    1.1%    1.4%  T v8::internal::compiler::LinearScanAllocator::TryReuseSpillForPhi(v8::internal::compiler::TopLevelLiveRange*)
+      3    1.1%    1.4%  T v8::internal::compiler::LinearScanAllocator::TryAllocateFreeReg(v8::internal::compiler::LiveRange*, v8::internal::Vector<v8::internal::compiler::LifetimePosition> const&)
+      3    1.1%    1.4%  T v8::internal::compiler::GapResolver::PerformMove(v8::internal::compiler::ParallelMove*, v8::internal::compiler::MoveOperands*)
+      3    1.1%    1.4%  T v8::internal::compiler::CodeAssemblerLabel::MergeVariables()
+      2    0.7%    1.0%  t void std::__1::__tree_remove<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
+      2    0.7%    1.0%  t std::__1::vector<v8::internal::compiler::BasicBlock*, v8::internal::ZoneAllocator<v8::internal::compiler::BasicBlock*> >::__append(unsigned long)
+      2    0.7%    1.0%  T v8::internal::compiler::SpillRange::SpillRange(v8::internal::compiler::TopLevelLiveRange*, v8::internal::Zone*)
+      2    0.7%    1.0%  T v8::internal::compiler::RegisterAllocationData::GetOrCreateLiveRangeFor(int)
+      2    0.7%    1.0%  T v8::internal::compiler::ReferenceMapPopulator::PopulateReferenceMaps()
+      2    0.7%    1.0%  T v8::internal::compiler::OperandAssigner::CommitAssignment()
+      2    0.7%    1.0%  T v8::internal::compiler::Node::New(v8::internal::Zone*, unsigned int, v8::internal::compiler::Operator const*, int, v8::internal::compiler::Node* const*, bool)
+      2    0.7%    1.0%  T v8::internal::compiler::LiveRangeBuilder::ComputeLiveOut(v8::internal::compiler::InstructionBlock const*, v8::internal::compiler::RegisterAllocationData*)
+      2    0.7%    1.0%  T v8::internal::compiler::LiveRange::DetachAt(v8::internal::compiler::LifetimePosition, v8::internal::compiler::LiveRange*, v8::internal::Zone*, v8::internal::compiler::LiveRange::HintConnectionOption)
+      2    0.7%    1.0%  T v8::internal::compiler::JumpThreading::ApplyForwarding(v8::internal::ZoneVector<v8::internal::compiler::RpoNumber>&, v8::internal::compiler::InstructionSequence*)
+      2    0.7%    1.0%  T v8::internal::compiler::InstructionSelector::VisitBlock(v8::internal::compiler::BasicBlock*)
+      2    0.7%    1.0%  T v8::internal::compiler::FrameElider::Run()
+      2    0.7%    1.0%  T v8::internal::compiler::FrameElider::MarkDeConstruction()
+      2    0.7%    1.0%  T v8::internal::compiler::CodeGenerator::AssembleInstruction(v8::internal::compiler::Instruction*, v8::internal::compiler::InstructionBlock const*)
+      2    0.7%    1.0%  T v8::internal::compiler::CodeGenerator::AssembleCode()
+      2    0.7%    1.0%  T v8::internal::Scanner::Scan()
+      2    0.7%    1.0%  T v8::internal::BitVector::Iterator::Advance()
+      2    0.7%    1.0%  T node::TTYWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.4%    0.5%  t void std::__1::vector<v8::internal::compiler::Constant, v8::internal::ZoneAllocator<v8::internal::compiler::Constant> >::__push_back_slow_path<v8::internal::compiler::Constant const&>(v8::internal::compiler::Constant const&&&)
+      1    0.4%    0.5%  t void std::__1::vector<v8::internal::compiler::BasicBlock*, v8::internal::ZoneAllocator<v8::internal::compiler::BasicBlock*> >::__push_back_slow_path<v8::internal::compiler::BasicBlock* const&>(v8::internal::compiler::BasicBlock* const&&&)
+      1    0.4%    0.5%  t void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
+      1    0.4%    0.5%  t void std::__1::__sort<bool (*&)(v8::internal::compiler::MoveOperands const*, v8::internal::compiler::MoveOperands const*), v8::internal::compiler::MoveOperands**>(v8::internal::compiler::MoveOperands**, v8::internal::compiler::MoveOperands**, bool (*&)(v8::internal::compiler::MoveOperands const*, v8::internal::compiler::MoveOperands const*))
+      1    0.4%    0.5%  t void std::__1::__insertion_sort_3<bool (*&)(v8::internal::compiler::LiveRange*, v8::internal::compiler::LiveRange*), v8::internal::compiler::LiveRange**>(v8::internal::compiler::LiveRange**, v8::internal::compiler::LiveRange**, bool (*&)(v8::internal::compiler::LiveRange*, v8::internal::compiler::LiveRange*))
+      1    0.4%    0.5%  t v8::internal::compiler::X64OperandGenerator::GetEffectiveAddressMemoryOperand(v8::internal::compiler::Node*, v8::internal::compiler::InstructionOperand*, unsigned long*)
+      1    0.4%    0.5%  t v8::internal::compiler::UnhandledSortHelper(v8::internal::compiler::LiveRange*, v8::internal::compiler::LiveRange*)
+      1    0.4%    0.5%  t v8::internal::compiler::JumpThreadingState::Forward(v8::internal::compiler::RpoNumber)
+      1    0.4%    0.5%  t v8::internal::compiler::InstructionOperandConverter::ToConstant(v8::internal::compiler::InstructionOperand*)
+      1    0.4%    0.5%  t v8::internal::compiler::(anonymous namespace)::VisitWordCompare(v8::internal::compiler::InstructionSelector*, v8::internal::compiler::Node*, int, v8::internal::compiler::FlagsContinuation*)
+      1    0.4%    0.5%  t v8::internal::compiler::(anonymous namespace)::VisitWord64Shift(v8::internal::compiler::InstructionSelector*, v8::internal::compiler::Node*, v8::internal::compiler::ArchOpcode)
+      1    0.4%    0.5%  t v8::internal::compiler::(anonymous namespace)::VisitCompareWithMemoryOperand(v8::internal::compiler::InstructionSelector*, int, v8::internal::compiler::Node*, v8::internal::compiler::InstructionOperand, v8::internal::compiler::FlagsContinuation*)
+      1    0.4%    0.5%  t v8::internal::UniqueSet<v8::internal::Map>::Add(v8::internal::Unique<v8::internal::Map>, v8::internal::Zone*)
+      1    0.4%    0.5%  t v8::internal::SlotSet::Insert(int)
+      1    0.4%    0.5%  t v8::internal::ParserBase<v8::internal::Parser>::ParseFormalParameter(v8::internal::ParserFormalParameters*, bool*)
+      1    0.4%    0.5%  t v8::internal::ParserBase<v8::internal::Parser>::ParseBinaryExpression(int, bool, bool*)
+      1    0.4%    0.5%  t v8::internal::ParserBase<v8::internal::Parser>::ParseAssignmentExpression(bool, bool*)
+      1    0.4%    0.5%  t v8::internal::ParserBase<v8::internal::Parser>::ParseAndClassifyIdentifier(bool*)
+      1    0.4%    0.5%  t v8::internal::LCodeGen::LCodeGen(v8::internal::LChunk*, v8::internal::MacroAssembler*, v8::internal::CompilationInfo*)
+      1    0.4%    0.5%  t v8::internal::(anonymous namespace)::CompileUnoptimizedCode(v8::internal::CompilationInfo*, v8::internal::Compiler::ConcurrencyMode)
+      1    0.4%    0.5%  t std::__1::deque<v8::internal::compiler::RpoNumber, v8::internal::RecyclingZoneAllocator<v8::internal::compiler::RpoNumber> >::__add_back_capacity()
+      1    0.4%    0.5%  t std::__1::__function::__func<v8::internal::interpreter::InterpreterAssembler::InterpreterAssembler(v8::internal::compiler::CodeAssemblerState*, v8::internal::interpreter::Bytecode, v8::internal::interpreter::OperandScale)::$_0, std::__1::allocator<v8::internal::interpreter::InterpreterAssembler::InterpreterAssembler(v8::internal::compiler::CodeAssemblerState*, v8::internal::interpreter::Bytecode, v8::internal::interpreter::OperandScale)::$_0>, void ()>::__clone(std::__1::__function::__base<void ()>*) const
+      1    0.4%    0.5%  t node::Binding(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.4%    0.5%  T v8::internal::compiler::TopLevelLiveRange::Splinter(v8::internal::compiler::LifetimePosition, v8::internal::compiler::LifetimePosition, v8::internal::Zone*)
+      1    0.4%    0.5%  T v8::internal::compiler::TopLevelLiveRange::AddUsePosition(v8::internal::compiler::UsePosition*)
+      1    0.4%    0.5%  T v8::internal::compiler::Schedule::PropagateDeferredMark()
+      1    0.4%    0.5%  T v8::internal::compiler::Schedule::EnsureCFGWellFormedness()
+      1    0.4%    0.5%  T v8::internal::compiler::Node::AppendInput(v8::internal::Zone*, v8::internal::compiler::Node*)
+      1    0.4%    0.5%  T v8::internal::compiler::MoveOptimizer::RemoveClobberedDestinations(v8::internal::compiler::Instruction*)
+      1    0.4%    0.5%  T v8::internal::compiler::MoveOptimizer::OptimizeMerge(v8::internal::compiler::InstructionBlock*)
+      1    0.4%    0.5%  T v8::internal::compiler::MoveOptimizer::FinalizeMoves(v8::internal::compiler::Instruction*)
+      1    0.4%    0.5%  T v8::internal::compiler::LiveRangeSeparator::Splinter()
+      1    0.4%    0.5%  T v8::internal::compiler::LiveRangeBuilder::Use(v8::internal::compiler::LifetimePosition, v8::internal::compiler::LifetimePosition, v8::internal::compiler::InstructionOperand*, void*, v8::internal::compiler::UsePositionHintType)
+      1    0.4%    0.5%  T v8::internal::compiler::LiveRangeBuilder::BuildLiveRanges()
+      1    0.4%    0.5%  T v8::internal::compiler::LiveRangeBuilder::AddInitialIntervals(v8::internal::compiler::InstructionBlock const*, v8::internal::BitVector*)
+      1    0.4%    0.5%  T v8::internal::compiler::LinearScanAllocator::TryAllocatePreferredReg(v8::internal::compiler::LiveRange*, v8::internal::Vector<v8::internal::compiler::LifetimePosition> const&)
+      1    0.4%    0.5%  T v8::internal::compiler::LinearScanAllocator::ProcessCurrentRange(v8::internal::compiler::LiveRange*)
+      1    0.4%    0.5%  T v8::internal::compiler::LinearScanAllocator::AllocateBlockedReg(v8::internal::compiler::LiveRange*)
+      1    0.4%    0.5%  T v8::internal::compiler::InstructionSequence::MarkAsRepresentation(v8::internal::MachineRepresentation, int)
+      1    0.4%    0.5%  T v8::internal::compiler::InstructionSequence::GetInstructionBlock(int) const
+      1    0.4%    0.5%  T v8::internal::compiler::InstructionSequence::AddInstruction(v8::internal::compiler::Instruction*)
+      1    0.4%    0.5%  T v8::internal::compiler::InstructionSelector::MarkAsUsed(v8::internal::compiler::Node*)
+      1    0.4%    0.5%  T v8::internal::compiler::InstructionSelector::InstructionSelector(v8::internal::Zone*, unsigned long, v8::internal::compiler::Linkage*, v8::internal::compiler::InstructionSequence*, v8::internal::compiler::Schedule*, v8::internal::compiler::SourcePositionTable*, v8::internal::compiler::Frame*, v8::internal::compiler::InstructionSelector::SourcePositionMode, v8::internal::compiler::InstructionSelector::Features, v8::internal::compiler::InstructionSelector::EnableScheduling, v8::internal::compiler::InstructionSelector::EnableSerialization)
+      1    0.4%    0.5%  T v8::internal::compiler::InstructionSelector::InitializeCallBuffer(v8::internal::compiler::Node*, v8::internal::compiler::CallBuffer*, v8::base::Flags<v8::internal::compiler::InstructionSelector::CallBufferFlag, int>, int)
+      1    0.4%    0.5%  T v8::internal::compiler::InstructionSelector::EmitPrepareArguments(v8::internal::ZoneVector<v8::internal::compiler::PushParameter>*, v8::internal::compiler::CallDescriptor const*, v8::internal::compiler::Node*)
+      1    0.4%    0.5%  T v8::internal::compiler::InstructionOperand::InterferesWith(v8::internal::compiler::InstructionOperand const&) const
+      1    0.4%    0.5%  T v8::internal::compiler::Instruction::Instruction(int, unsigned long, v8::internal::compiler::InstructionOperand*, unsigned long, v8::internal::compiler::InstructionOperand*, unsigned long, v8::internal::compiler::InstructionOperand*)
+      1    0.4%    0.5%  T v8::internal::compiler::Graph::NewNodeUnchecked(v8::internal::compiler::Operator const*, int, v8::internal::compiler::Node* const*, bool)
+      1    0.4%    0.5%  T v8::internal::compiler::GapResolver::Resolve(v8::internal::compiler::ParallelMove*)
+      1    0.4%    0.5%  T v8::internal::compiler::ConstraintBuilder::MeetRegisterConstraintsForLastInstructionInBlock(v8::internal::compiler::InstructionBlock const*)
+      1    0.4%    0.5%  T v8::internal::compiler::CodeGenerator::AssembleMove(v8::internal::compiler::InstructionOperand*, v8::internal::compiler::InstructionOperand*)
+      1    0.4%    0.5%  T v8::internal::compiler::CodeAssembler::GotoIf(v8::internal::compiler::Node*, v8::internal::compiler::CodeAssemblerLabel*)
+      1    0.4%    0.5%  T v8::internal::compiler::CodeAssembler::BitcastWordToTagged(v8::internal::compiler::Node*)
+      1    0.4%    0.5%  T v8::internal::compiler::BasicBlock::set_rpo_number(int)
+      1    0.4%    0.5%  T v8::internal::ScriptContextTable::Lookup(v8::internal::Handle<v8::internal::ScriptContextTable>, v8::internal::Handle<v8::internal::String>, v8::internal::ScriptContextTable::LookupResult*)
+      1    0.4%    0.5%  T v8::internal::Scanner::ScanString()
+      1    0.4%    0.5%  T v8::internal::Scanner::ScanIdentifierOrKeyword()
+      1    0.4%    0.5%  T v8::internal::Scanner::Next()
+      1    0.4%    0.5%  T v8::internal::Parser::ShortcutNumericLiteralBinaryExpression(v8::internal::Expression**, v8::internal::Expression*, v8::internal::Token::Value, int)
+      1    0.4%    0.5%  T v8::internal::Parser::Parser(v8::internal::ParseInfo*)
+      1    0.4%    0.5%  T v8::internal::Operand::Operand(v8::internal::Register, int)
+      1    0.4%    0.5%  T v8::internal::MemoryAllocator::AllocateChunk(unsigned long, unsigned long, v8::internal::Executability, v8::internal::Space*)
+      1    0.4%    0.5%  T v8::internal::LCodeGen::GenerateBodyInstructionPre(v8::internal::LInstruction*)
+      1    0.4%    0.5%  T v8::internal::Heap::AllocateFixedArrayWithFiller(int, v8::internal::PretenureFlag, v8::internal::Object*)
+      1    0.4%    0.5%  T v8::internal::HEnvironmentLivenessAnalysisPhase::HEnvironmentLivenessAnalysisPhase(v8::internal::HGraph*)
+      1    0.4%    0.5%  T v8::internal::FuncNameInferrer::PushVariableName(v8::internal::AstRawString const*)
+      1    0.4%    0.5%  T v8::internal::FuncNameInferrer::PushLiteralName(v8::internal::AstRawString const*)
+      1    0.4%    0.5%  T v8::internal::Factory::NewFunction(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::SharedFunctionInfo>, v8::internal::Handle<v8::internal::Object>, v8::internal::PretenureFlag)
+      1    0.4%    0.5%  T v8::internal::CompilationDependencies::Rollback()
+      1    0.4%    0.5%  T v8::internal::CodeStubAssembler::CodeStubAssembler(v8::internal::compiler::CodeAssemblerState*)
+      1    0.4%    0.5%  T v8::internal::AstValueFactory::GetOneByteStringInternal(v8::internal::Vector<unsigned char const>)
+      1    0.4%    0.5%  T v8::internal::AstNumberingVisitor::VisitReference(v8::internal::Expression*)
+      1    0.4%    0.5%  T v8::internal::Assembler::Nop(int)
+      1    0.4%    0.5%  T v8::base::RandomNumberGenerator::Next(int)
+
+ [Summary]:
+   ticks  total  nonlib   name
+      2    0.7%    1.0%  JavaScript
+    200   71.9%   96.2%  C++
+      3    1.1%    1.4%  GC
+     70   25.2%          Shared libraries
+      6    2.2%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     27   64.3%    9.7%  T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     10   23.8%    3.6%  T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    4.8%    0.7%  T v8::internal::Runtime_SetCode(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    2.4%    0.4%  T v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    2.4%    0.4%  T v8::internal::Runtime_LoadGlobalIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    2.4%    0.4%  T v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+     51   18.3%  /usr/lib/system/libsystem_malloc.dylib
+
+     24    8.6%  t node::(anonymous namespace)::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     24  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     24  100.0%      Function: ~runInThisContext bootstrap_node.js:485:28
+     24  100.0%        Function: ~NativeModule.compile bootstrap_node.js:574:44
+     24  100.0%          Function: ~NativeModule.require bootstrap_node.js:506:34
+      4   16.7%            Function: ~<anonymous> module.js:1:11
+      3   12.5%            Function: ~setupGlobalVariables bootstrap_node.js:215:32
+      3   12.5%            Function: ~<anonymous> fs.js:1:11
+      2    8.3%            Function: ~startup bootstrap_node.js:12:19
+      2    8.3%            Function: ~<anonymous> util.js:1:11
+      1    4.2%            Function: ~setupInspectorCommandLineAPI bootstrap_node.js:314:40
+      1    4.2%            Function: ~setupGlobalTimeouts bootstrap_node.js:260:31
+      1    4.2%            Function: ~createWritableStdioStream internal/process/stdio.js:151:35
+      1    4.2%            Function: ~<anonymous> tty.js:1:11
+      1    4.2%            Function: ~<anonymous> timers.js:1:11
+      1    4.2%            Function: ~<anonymous> stream.js:1:11
+      1    4.2%            Function: ~<anonymous> internal/url.js:1:11
+      1    4.2%            Function: ~<anonymous> internal/encoding.js:1:11
+      1    4.2%            Function: ~<anonymous> buffer.js:1:11
+      1    4.2%            Function: ~<anonymous> _stream_readable.js:1:11
+
+     11    4.0%  T v8::internal::compiler::LinearScanAllocator::AllocateRegisters()
+
+      9    3.2%  T v8::internal::compiler::CodeAssemblerLabel::UpdateVariablesAfterBind()
+
+      8    2.9%  /usr/lib/system/libsystem_kernel.dylib
+      1   12.5%    T v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~<anonymous> internal/process.js:1:11
+      1  100.0%        Function: ~NativeModule.compile bootstrap_node.js:574:44
+      1  100.0%          Function: ~NativeModule.require bootstrap_node.js:506:34
+      1  100.0%            Function: ~startup bootstrap_node.js:12:19
+
+      7    2.5%  T v8::internal::compiler::LinearScanAllocator::FindFreeRegistersForRange(v8::internal::compiler::LiveRange*, v8::internal::Vector<v8::internal::compiler::LifetimePosition>)
+
+      6    2.2%  UNKNOWN
+      1   16.7%    T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~Module._extensions..js module.js:582:37
+      1  100.0%        Function: ~Module.load module.js:498:33
+      1  100.0%          Function: ~tryModuleLoad module.js:467:23
+      1  100.0%            Function: ~Module._load module.js:434:24
+
+      6    2.2%  T v8::internal::compiler::LiveRangeConnector::ResolveControlFlow(v8::internal::Zone*)
+
+      5    1.8%  T v8::internal::compiler::InstructionSequence::InstructionBlocksFor(v8::internal::Zone*, v8::internal::compiler::Schedule const*)
+
+      5    1.8%  /usr/lib/system/libsystem_c.dylib
+      2   40.0%    T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   50.0%      Function: ~Module.runMain module.js:607:26
+      1  100.0%        Function: ~startup bootstrap_node.js:12:19
+      1  100.0%          Function: ~<anonymous> bootstrap_node.js:10:10
+      1   50.0%      Function: ~Module._initPaths module.js:614:29
+      1  100.0%        Function: ~<anonymous> module.js:1:11
+      1  100.0%          Function: ~NativeModule.compile bootstrap_node.js:574:44
+      1  100.0%            Function: ~NativeModule.require bootstrap_node.js:506:34
+
+      4    1.4%  t v8::internal::compiler::SpecialRPONumberer::ComputeAndInsertSpecialRPO(v8::internal::compiler::BasicBlock*, v8::internal::compiler::BasicBlock*)
+
+      4    1.4%  T v8::internal::compiler::LiveRangeBuilder::ProcessInstructions(v8::internal::compiler::InstructionBlock const*, v8::internal::BitVector*)
+
+      4    1.4%  T v8::internal::compiler::InstructionSelector::SelectInstructions()
+
+      4    1.4%  T v8::internal::Zone::New(unsigned long)
+
+      3    1.1%  T v8::internal::compiler::LinearScanAllocator::TryReuseSpillForPhi(v8::internal::compiler::TopLevelLiveRange*)
+
+      3    1.1%  T v8::internal::compiler::LinearScanAllocator::TryAllocateFreeReg(v8::internal::compiler::LiveRange*, v8::internal::Vector<v8::internal::compiler::LifetimePosition> const&)
+
+      3    1.1%  T v8::internal::compiler::GapResolver::PerformMove(v8::internal::compiler::ParallelMove*, v8::internal::compiler::MoveOperands*)
+
+      3    1.1%  T v8::internal::compiler::CodeAssemblerLabel::MergeVariables()
+
+      3    1.1%  /usr/lib/system/libsystem_platform.dylib
+      1   33.3%    T v8::internal::Runtime_SetCode(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~<anonymous> native collection.js:2:10
+
