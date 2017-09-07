@@ -12,12 +12,17 @@ const iterFibb = n => {
   return start;
 }
 
-// Compute Fibbonacci tail-recursively
-const recurFibb = n => {
-
+// Compute Fibbonacci recursively -- badly
+const recurFibb = (n, arr=[]) => {
+  const nextItem = m => {
+    if (m < 2) return m;
+    return nextItem(m-2) + nextItem(m-1)
+  }
+  if (n < 1) return arr; // Base case
+  return recurFibb(n-1, [nextItem(n)].concat(arr) )
 }
 
-// Compute Fibbonacci recursively
+// Compute Fibbonacci tail-recursively
 const tailFibb = (n, arr=[]) => {
   if (n < 1) return arr; // Base case
   const len = arr.length;
@@ -34,10 +39,16 @@ const tailFibb = (n, arr=[]) => {
 // console.log(`iterFibb -- Expecting ${iterFibb(8)} to equal 1,1,2,3,5,8,13,21`);
 
 // Recursive
-console.log(`tailFibb -- Expecting ${tailFibb(3)} to equal 1,1,2`);
-console.log(`tailFibb -- Expecting ${tailFibb(1)} to equal 1`);
-console.log(`tailFibb -- Expecting ${tailFibb(8)} to equal 1,1,2,3,5,8,13,21`);
-console.log(`tailFibb -- Expecting ${tailFibb(120)} to equal [something really huge]`);
+console.log(`recurFibb -- Expecting ${recurFibb(3)} to equal 1,1,2`);
+console.log(`recurFibb -- Expecting ${recurFibb(1)} to equal 1`);
+console.log(`recurFibb -- Expecting ${recurFibb(8)} to equal 1,1,2,3,5,8,13,21`);
+console.log(`recurFibb -- Expecting ${recurFibb(37)} to equal [something really huge]`);
+
+// Tail Recursive
+// console.log(`tailFibb -- Expecting ${tailFibb(3)} to equal 1,1,2`);
+// console.log(`tailFibb -- Expecting ${tailFibb(1)} to equal 1`);
+// console.log(`tailFibb -- Expecting ${tailFibb(8)} to equal 1,1,2,3,5,8,13,21`);
+// console.log(`tailFibb -- Expecting ${tailFibb(120)} to equal [something really huge]`);
 
 
 
