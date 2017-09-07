@@ -1,9 +1,19 @@
-/*
-Three ways to compute the factorial:
-1.
-*/
-
-
+// Replace While Loop With Recursion:
+// let counter = 10;
+// while(counter > 0) {
+//     console.log(counter--);
+// }
+//
+//
+// const countdown = function(value) {
+//     if (value > 0) {
+//         console.log(value);
+//         return countdown(value - 1);
+//     } else {
+//         return value;
+//     }
+// };
+// countdown(10);
 
 // Iterative Factorial Computatation
 // const iterFactorial = n => {
